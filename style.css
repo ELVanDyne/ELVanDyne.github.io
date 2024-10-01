@@ -1,0 +1,35 @@
+body{
+    background-image: url("images/mountains.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: white;
+    margin-top: 100px;
+}
+a{
+    text-decoration: none;
+    color: red;
+    border: solid red;
+    padding: 20px;
+    background: grey;
+    transition-duration: .4s;
+    stroke: black 20px;
+}
+a:hover{
+    margin-top: 50;
+    background-color: red;
+    color: white;
+    transition-duration: .4s;
+    padding: 30px;
+}
+div{
+    margin-left: 100px;
+}
+#Elijah{
+    color: aqua;
+}
+.small_image{
+    width: 100px;
+}
