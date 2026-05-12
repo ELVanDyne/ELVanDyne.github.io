@@ -1,33 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Swarm -- Honeybee Swarming Explained</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 <body>
-    <div>
-        <h1>
-            Hello,
-            My name is <span id="Elijah">Elijah</span>
-        </h1>
-        <div style="background-color: green; ">
-            <img src="images/mountains.jpg" class="small_image">
-            <img src="images/mountains.jpg" class="small_image">
-            <img src="images/mountains.jpg" class="small_image">
-            <img src="images/mountains.jpg" class="small_image">
-        </div>
-        <a href="" target="_blank">Visit my portfolio</a>
-        <a href="images/Resume-1.pdf" target="_blank" >Open my resume</a>
+
+<!--Nav -->
+<nav aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-brand">The Swarm</a>
+    <ul class="nav-links">
+      <li><a href="#what">What is it</a></li>
+      <li><a href="#why">Why it happens</a></li>
+      <li><a href="#inside">Inside the hive</a></li>
+      <li><a href="#flight">The flight</a></li>
+      <li><a href="#decision">Finding a home</a></li>
+      <li><a href="#what-to-do">What to do</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!--main -->
+<section id="hero" aria-label="Introduction">
+  <div class="hero-content">
+    <span class="label">A beekeeping field guide</span>
+    <h1 class="hero-title">
+      The Swarm
+    </h1>
+    <p class="hero-sub">
+      You just saw thousands of bees appear out of nowhere and settle in a mass on a nearby tree. It looks freakish, but this is actually one of the most carefully orchestrated events in the world of bees.
+    </p>
+    <a href="#what" class="hero-cta">Read on</a>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-hint-line"></div>
+    scroll
+  </div>
+</section>
+
+<!--Section 1: What-->
+<section id="what" class="section">
+  <div class="inner reveal">
+    <div class="section-head">
+      <span class="label">Section 01</span>
+      <h2>What is a swarm?</h2>
     </div>
 
-</body>
-<footer>
-    <script src="app.js"></script>
+    <p>
+      A honeybee swarm is how a colony reproduces. Normally a swarm is not a sign of danger, disease, or disturbance, but swarming can sometimes occur in unhealthy colonies. A healthy hive that is ready will reproduce by swarming, creating two different colonies where there was one before.
+    </p>
+    <p>
+      When a colony grows large enough, roughly half to 3 quarters of the bees leave with the old queen to start over somewhere new. They leave behind developing queen cells and some workers to protect and nurture them, as well as a supply of honey.
+    </p>
+    <p>
+      The group that left, generally called the prime swarm, typically numbers between 8,000 and 15,000 bees, but this depends on the size of the original colony. They leave in a giant sparse cloud of bees, then settle into a tight cluster on a branch, fence post, or really any convenient surface nearby. Then, they wait while a small group of scouts searches for a new home.
+    </p>
+    <p>
+    <div class="callout">
+      <p>Swarming bees are about as docile as they ever get. Having just gorged on honey before departure, and with no hive or brood to defend, they have little reason to sting.</p>
+      <cite>- University of Florida</cite>
+    </div>
 
+    <!-- IMAGE: A classic swarm cluster on a tree branch. . -->
+    <figure>
+      <img
+        src="images/swarm_cluster.jpg"
+        alt="A dense cluster of honeybees hanging from a tree branch during a swarm"
+        loading="lazy"
+        onerror="this.parentElement.style.background='#e8dcc8'; this.alt='[Photo: swarm cluster on branch -- image not loaded]'; this.style.minHeight='220px';"
+      />
+      <figcaption>
+        Pictured is a swarm at rest. The bees clump together around the queen, keeping her warm and safe while scouts locate their next home.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Section 2: why -->
+<section id="why" class="section section--alt">
+  <div class="inner reveal">
+    <div class="section-head">
+      <span class="label">Section 02</span>
+      <h2>Why swarming happens</h2>
+    </div>
+
+    <p>
+      There are several conditions that could push a colony toward swarming. In most cases, more than one factor is at work at once.
+    </p>
+
+    <div class="causes-grid">
+      <div class="cause-card">
+        <h3>Overcrowding</h3>
+        <p>In the spring and summer, the comb tends to fill up pretty fast since there is an abundance of nectar. If the queen has nowhere to lay eggs and workers have nowhere to store their food, the colony will begin to prepare for a split.</p>
+      </div>
+      <div class="cause-card">
+        <h3>Reproductive drive</h3>
+        <p>AFter a successful winter buildup, a healthy colony follows a deep biological impulse to reproduce at the species level. This instinct is strongest during the warm temperatures and long days of early summer.</p>
+      </div>
+      <div class="cause-card">
+        <h3>Weakening queen signal</h3>
+        <p>As the population of the hive grows during the spring, the queen's pheromones (which normally suppress the bees'urge to swarm) become too diluted across all of the workers. The lack of the chemical tells the workers to begin building queen cells.</p>
+      </div>
+      <div class="cause-card">
+        <h3>External Factors</h3>
+        <p>There are a lot of other factors that can contribute to a hive swarming, like too many mites, disease outbreaks in the colony, or pest infestations like wax moths. In these cases, a colony may swarm as a survival mechanism to escape the bad environment.</p>
+      </div>
+    </div>
+    <aside class="concept-note" style="margin-top: 2rem; padding: 1.5rem; background: rgba(200, 130, 10, 0.05); border-left: 4px solid #c8820a;">
+      <h4 style="margin-top: 0; color: #7a4e00;">Signals vs. Cues</h4>
+      <p style="font-size: 0.95rem; margin-bottom: 0;">
+        In bee biology, a <strong>signal</strong> is a communication evolved specifically to change the behavior of others (like queen pheromones or the waggle dance). A <strong>cue</strong> is simply information a bee picks up from its environment that wasn't intentionally sent, like if the hive is crowded or a drop in temperature.
+      </p>
+    </aside>
+  </div>
+</section>
+
+<!-- Section 3: inside the hive  -->
+<section id="inside" class="section section--dark">
+  <div class="inner reveal">
+    <div class="section-head">
+      <span class="label">Section 03</span>
+      <h2>Inside the hive before the swarm</h2>
+    </div>
+    <p>
+      Swarming isn't generally a sudden surprise. The colony spends weeks preparing, and a beekeeper who knows the signs can spot them before they leave.
+    </p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <h3>Queen cells appear</h3>
+        <p>Workers begin constructing longer cells along the lower edges of frames. These are cells for raising new queens. Their presence is an early sign that swarming is being prepared.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <h3>The current queen slims down</h3>
+        <p>Workers stop feeding the old queen as much, causing her to lose weight. If the queen is lighter, she can fly better, and she will need to fly when the swarm departs.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <h3>Scout bees begin searching</h3>
+        <p>A few hundred (depending on the size of the colony) foragers start leaving the hive to investigate potential nest sites. They will inspect hollow trees, wall cavities, and other enclosed spaces, measuring volume and entrance size.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <h3>Bees gorge on honey</h3>
+        <p>Right before departure, swarm bees fill their honey stomachs with about three days worth of energy reserves. This fuel will last them through the transition to a new home.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <h3>The buzz run signals departure</h3>
+        <p>Scout bees scuttle rapidly over the combs, vibrating their wings and bumping into other bees. This "buzz run" is the signal to launch. Within minutes, the swarm fills the air.</p>
+      </div>
+    </div>
+
+    <!-- IMAGE: Close-up of queen cells on a comb frame.
+         Suggested source: commons.wikimedia.org -- search "queen cells honeycomb"
+         Several clear photos exist there under CC-BY. -->
+    <figure>
+      <img
+        src="images/queen_cells.jpg"
+        alt="Capped queen cells on a honeycomb frame, bulging outward in a peanut shape"
+        loading="lazy"
+        onerror="this.parentElement.style.background='#2a2010'; this.alt='[Photo: queen cells on frame -- image not loaded]'; this.style.minHeight='220px';"
+      />
+      <figcaption>
+        Queen cells are a beekeepers first reliable warning that a swarm is being prepared. Finding several capped queen cells means a swarm may be days away.
+        <!-- Add photo credit here once you confirm the specific Wikimedia file and its license -->
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ── Section 4: The swarm in flight ─────────────────── -->
+<section id="flight" class="section">
+  <div class="inner--wide reveal">
+    <div class="inner" style="padding:0">
+      <div class="section-head">
+        <span class="label">Section 04</span>
+        <h2>The swarm in motion</h2>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <p>
+          When the swarm launches, it forms a churning airborne cloud. For a few minutes, the bees swirl in what looks like chaos. But the swarm has direction.
+        </p>
+        <p>
+          Only about 5% of the bees in flight are scouts -- the ones who already know where they are headed. Research by Stefan Janson and colleagues showed that scouts guide the swarm by flying through it at a slightly faster speed than the rest, pointed toward the target site. The uninformed bees follow the average direction of those around them, and gradually the entire swarm moves the right way.
+        </p>
+        <p>
+          The swarm almost always lands nearby first, usually within 100 meters of the original hive. This temporary cluster is not a permanent home. It is a staging point while the scouts finish deliberating.
+        </p>
+        <p>
+          The cluster can hold in place for a few hours or up to several days. During that time, the bees regulate their temperature collectively, maintaining the cluster core at around 35 degrees Celsius to keep the queen healthy.
+        </p>
+      </div>
+      <div>
+        <!-- IMAGE: A swarm in mid-air or in a tight aerial cloud.
+             Suggested source: pixabay.com or commons.wikimedia.org
+             Search: "honeybee swarm flying cloud" -- CC0 or CC-BY options exist. -->
+        <figure style="margin: 0">
+          <img
+            src="images/swarm_in_flight.jpg"
+            alt="A dense cloud of honeybees in the air during an active swarm"
+            loading="lazy"
+            style="max-height: 380px; object-fit: cover; width: 100%;"
+            onerror="this.parentElement.style.background='#f0e8d5'; this.alt='[Photo: bees in flight -- image not loaded]'; this.style.minHeight='280px';"
+          />
+          <figcaption>
+            A swarm in flight appears disorienting, but the bees are following subtle directional cues from the small minority of scouts who know the destination.
+            <!-- Add photo credit here once you confirm the specific Wikimedia file and its license -->
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Section 5: Finding a new home ──────────────────── -->
+<section id="decision" class="section section--amber">
+  <div class="inner reveal">
+    <div class="section-head">
+      <span class="label">Section 05</span>
+      <h2>Finding a new home</h2>
+    </div>
+
+    <p>
+      The way a swarm chooses its new home is one of the more remarkable decision-making processes in nature. The researcher Thomas Seeley spent decades studying it, and described it in his book <em>Honeybee Democracy</em> (Princeton University Press, 2010).
+    </p>
+    <p>
+      Between 200 and 300 scout bees fan out from the cluster, searching up to 30 square miles of surrounding land. Each scout evaluates potential cavities independently, looking for specific qualities: a volume close to 40 liters, a small entrance, a south-facing opening, and a location several feet off the ground.
+    </p>
+    <p>
+      When a scout finds a promising site, she returns to the cluster and performs a waggle dance. The vigor and duration of the dance reflects how good the site is. Other scouts observe, visit the site themselves, and come back to dance in support if they agree. Scouts who found weaker sites dance less and less over time, eventually stopping altogether.
+    </p>
+    <p>
+      When enough scouts are all dancing for the same site, roughly 15 to 20 scouts at the site simultaneously, a quorum has been reached. Those scouts return to the cluster and produce a "piping" signal, pressing their thorax against other bees and vibrating at around 250 Hz. This is the final launch command. The whole swarm lifts off and flies directly to the new home.
+    </p>
+    <p>
+      Seeley's experiments showed that swarms chose the best available site out of several options in four out of five trials. The process is not perfect, but it is reliably good.
+    </p>
+
+    <!-- Waggle dance diagram built in SVG -- no external asset needed -->
+    <div class="decision-diagram" aria-label="Diagram showing the waggle dance communication process">
+      <svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Waggle dance diagram">
+        <defs>
+          <marker id="arr" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#c8820a"/>
+          </marker>
+        </defs>
+
+        <!-- Sun indicator -->
+        <circle cx="260" cy="30" r="16" fill="#f5e4b8" stroke="#c8820a" stroke-width="1.5"/>
+        <text x="260" y="35" text-anchor="middle" font-size="11" fill="#7a4e00" font-family="Georgia, serif">Sun</text>
+
+        <!-- Comb background -->
+        <rect x="80" y="70" width="360" height="180" rx="4" fill="rgba(200,130,10,0.08)" stroke="#c8820a" stroke-width="1" stroke-dasharray="4 3"/>
+        <text x="260" y="92" text-anchor="middle" font-size="10" fill="#7a4e00" letter-spacing="1" font-family="Georgia, serif">HONEYCOMB FACE</text>
+
+        <!-- Bee body (center) -->
+        <ellipse cx="200" cy="170" rx="18" ry="11" fill="#c8820a" opacity="0.9"/>
+        <ellipse cx="215" cy="167" rx="7" ry="5" fill="rgba(200,130,10,0.5)" stroke="#c8820a" stroke-width="0.8"/>
+        <ellipse cx="186" cy="167" rx="7" ry="5" fill="rgba(200,130,10,0.5)" stroke="#c8820a" stroke-width="0.8"/>
+        <text x="200" y="196" text-anchor="middle" font-size="9" fill="#7a4e00" font-family="Georgia, serif">Scout bee</text>
+
+        <!-- Waggle run arrow -->
+        <line x1="218" y1="162" x2="295" y2="125" stroke="#c8820a" stroke-width="2.5" marker-end="url(#arr)"/>
+        <text x="270" y="138" font-size="9.5" fill="#7a4e00" font-family="Georgia, serif">Waggle run</text>
+        <text x="263" y="150" font-size="8.5" fill="#7a4e00" font-family="Georgia, serif" font-style="italic">(direction = food source</text>
+        <text x="263" y="161" font-size="8.5" fill="#7a4e00" font-family="Georgia, serif" font-style="italic"> relative to sun)</text>
+
+        <!-- Return loop left -->
+        <path d="M200 159 C160 120 130 140 200 159" fill="none" stroke="#c8820a" stroke-width="1.5" stroke-dasharray="3 2" marker-end="url(#arr)"/>
+        <text x="145" y="130" font-size="9" fill="#7a4e00" font-family="Georgia, serif">Return loop</text>
+
+        <!-- Duration note -->
+        <rect x="300" y="195" width="130" height="44" rx="3" fill="rgba(200,130,10,0.12)" stroke="#c8820a" stroke-width="0.8"/>
+        <text x="365" y="213" text-anchor="middle" font-size="9" fill="#7a4e00" font-family="Georgia, serif">Duration of dance</text>
+        <text x="365" y="226" text-anchor="middle" font-size="9" fill="#7a4e00" font-family="Georgia, serif">indicates distance</text>
+        <text x="365" y="238" text-anchor="middle" font-size="9" fill="#7a4e00" font-family="Georgia, serif">to the site</text>
+
+        <text x="260" y="270" text-anchor="middle" font-size="9" fill="#7a4e00" font-family="Georgia, serif" font-style="italic">
+          Scouts dance longer and more vigorously for higher-quality sites
+        </text>
+      </svg>
+      <p style="font-size:0.78rem; color:var(--amber-deep); margin-top:0.8rem;">
+        The waggle dance encodes both direction and distance. Multiple scouts dance simultaneously, and bees observe and compare before deciding which site to visit.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Section 6: What to do ───────────────────────────── -->
+<section id="what-to-do" class="section">
+  <div class="inner reveal">
+    <div class="section-head">
+      <span class="label">Section 06</span>
+      <h2>What should you do?</h2>
+    </div>
+    <p>The answer depends on who you are. Choose below.</p>
+
+    <div class="toggle-row" role="tablist" aria-label="Select your situation">
+      <button class="toggle-btn active" id="btn-nonbk" role="tab" aria-selected="true" aria-controls="panel-nonbk" onclick="switchPanel('nonbk')">
+        Not a beekeeper
+      </button>
+      <button class="toggle-btn" id="btn-bk" role="tab" aria-selected="false" aria-controls="panel-bk" onclick="switchPanel('bk')">
+        I keep bees
+      </button>
+    </div>
+
+    <!-- Panel A: Non-beekeeper -->
+    <div class="panel visible" id="panel-nonbk" role="tabpanel" aria-labelledby="btn-nonbk">
+      <p>A swarm in your yard is not an emergency. Swarming bees are calm and focused on finding shelter, not on you. Here is what to do.</p>
+      <ul class="step-list">
+        <li>
+          <span class="step-num">1</span>
+          <div class="step-text">
+            <strong>Leave them alone</strong>
+            <p>Keep people and pets away from the cluster. Do not disturb the bees or spray them with water or anything else.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <div class="step-text">
+            <strong>Wait and watch</strong>
+            <p>Most swarms move on within 24 to 48 hours once the scouts have reached a decision. If the cluster is not in your way, the easiest option is simply to wait.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <div class="step-text">
+            <strong>Call a local beekeeper if needed</strong>
+            <p>If the swarm is in a bad location or you need it removed sooner, contact a local beekeeper. Many beekeepers will collect swarms for free since a swarm is a free colony of bees. Your county extension office can often provide a referral.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <div class="step-text">
+            <strong>Extermination is a last resort</strong>
+            <p>Killing a swarm is unnecessary in almost every case and removes beneficial pollinators. A beekeeper can almost always collect the bees alive.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Panel B: Beekeeper -->
+    <div class="panel" id="panel-bk" role="tabpanel" aria-labelledby="btn-bk">
+      <p>Swarm prevention is one of the more demanding parts of hive management in spring. Here are the key steps.</p>
+      <ul class="step-list">
+        <li>
+          <span class="step-num">1</span>
+          <div class="step-text">
+            <strong>Inspect regularly in spring</strong>
+            <p>Check frames every 7 to 10 days from early spring through midsummer. You are looking for queen cells, particularly capped ones along the bottom bars.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <div class="step-text">
+            <strong>Give the colony space</strong>
+            <p>Add supers before the hive fills up. Congestion is one of the main triggers. A colony with room to store nectar and expand brood is less likely to swarm.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <div class="step-text">
+            <strong>Make a split</strong>
+            <p>If you find early queen cells, a split mimics a swarm artificially. Move several frames of brood, bees, and a queen cell into a new box. This relieves the congestion and gives you an additional colony.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <div class="step-text">
+            <strong>Collect a swarm if one happens</strong>
+            <p>If your colony does swarm, you can often collect it. Shake or brush the cluster into a box with a frame or two of drawn comb. Move the box to its permanent location after dark.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">5</span>
+          <div class="step-text">
+            <strong>Check the original hive</strong>
+            <p>After a swarm, the parent hive will raise a new queen. Check 2 to 3 weeks later to confirm the new queen is laying. If you find only drone brood or no eggs, you may need to re-queen.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── Sources ─────────────────────────────────────────── -->
+<section id="sources">
+  <div class="inner reveal">
+    <div class="section-head">
+      <span class="label">References</span>
+      <h2>Sources</h2>
+    </div>
+    <p>This site draws on the following sources. Follow the links to read further.</p>
+    <ul class="sources-list">
+      <li>
+        Seeley, T.D. (2010). <em>Honeybee Democracy.</em> Princeton University Press.
+        -- Comprehensive study of how swarms collectively choose their new home.
+      </li>
+      <li>
+        Seeley, T.D., Visscher, P.K., et al. (2006). Group Decision Making in Honey Bee Swarms.
+        <em>American Scientist.</em>
+        <a href="https://www.americanscientist.org/article/group-decision-making-in-honey-bee-swarms" target="_blank" rel="noopener">americanscientist.org</a>
+      </li>
+      <li>
+        Janson, S., Middendorf, M., &amp; Beekman, M. (2005). Honeybee swarms: how do scouts guide a swarm of uninformed bees?
+        <em>Animal Behaviour, 70</em>(2), 349--358.
+        <a href="https://www.sciencedirect.com/science/article/pii/S0003347205001016" target="_blank" rel="noopener">sciencedirect.com</a>
+      </li>
+      <li>
+        Wikipedia contributors. Swarming (honey bee).
+        <a href="https://en.wikipedia.org/wiki/Swarming_(honey_bee)" target="_blank" rel="noopener">en.wikipedia.org</a>
+      </li>
+      <li>
+        University of Florida IFAS Extension -- Volusia County. (2025). Honey Bees and Swarming.
+        <a href="https://blogs.ifas.ufl.edu/volusiaco/2025/02/26/honey-bees-and-swarming-understanding-this-natural-phenomenon/" target="_blank" rel="noopener">blogs.ifas.ufl.edu</a>
+      </li>
+      <li>
+        Beekeeper Corner. (2025). Understanding Bee Swarm Behavior in Honeybees.
+        <a href="https://beekeepercorner.com/understanding-bee-swarm-behavior-in-honeybees/" target="_blank" rel="noopener">beekeepercorner.com</a>
+      </li>
+      <li>
+        BeeListener.co.uk. Swarm Behaviour.
+        <a href="https://www.beelistener.co.uk/communication-in-honey-bees/swarm-behaviour/" target="_blank" rel="noopener">beelistener.co.uk</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────────── -->
+<footer>
+  <p>The Swarm -- Honeybee Swarming Explained</p>
+  <p style="margin-top:0.4rem">Beekeeping final project &bull; Images sourced from Wikimedia Commons under Creative Commons licenses &bull; See each figure caption for individual credits</p>
 </footer>
 
+<!-- ── Scripts ─────────────────────────────────────────── -->
+<script>
+  // Panel toggle
+  function switchPanel(which) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('visible'));
+    document.querySelectorAll('.toggle-btn').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    document.getElementById('panel-' + which).classList.add('visible');
+    document.getElementById('btn-' + which).classList.add('active');
+    document.getElementById('btn-' + which).setAttribute('aria-selected', 'true');
+  }
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in-view');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
 </html>
