@@ -1,4 +1,4 @@
-/* ── Variables ─────────────────────────────────────── */
+/* Variables  */
 :root {
   --amber:      #c8820a;
   --amber-pale: #f5e4b8;
@@ -17,7 +17,7 @@
   --wide-max:    1100px;
 }
 
-/* ── Reset ─────────────────────────────────────────── */
+/* Reset  */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -31,7 +31,7 @@ body {
 img { display: block; max-width: 100%; height: auto; }
 a { color: var(--amber-deep); }
 
-/* ── Utility ───────────────────────────────────────── */
+/* Utility  */
 .inner {
   max-width: var(--content-max);
   margin-inline: auto;
@@ -47,7 +47,7 @@ a { color: var(--amber-deep); }
 }
 .rule { border: none; border-top: 1px solid var(--rule); margin-block: 2.5rem; }
 
-/* ── Nav ───────────────────────────────────────────── */
+/* Nav  */
 nav {
   position: sticky;
   top: 0;
