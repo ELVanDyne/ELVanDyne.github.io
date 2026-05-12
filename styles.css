@@ -88,7 +88,7 @@ nav {
 }
 .nav-links a:hover { color: var(--amber); }
 
-/* ── Hero ──────────────────────────────────────────── */
+/* Hero */
 #hero {
   min-height: 92vh;
   display: grid;
@@ -99,9 +99,6 @@ nav {
   background: var(--ink);
   padding: var(--section-pad) 1.5rem;
 }
-/* Background image -- swap this src if you have a better swarm photo */
-/* IMAGE: hero background -- ideally a dramatic swarm-in-flight or cluster photo */
-/* Current placeholder: patterned SVG. Replace the background-image below with a real photo URL. */
 #hero::before {
   content: '';
   position: absolute;
@@ -175,7 +172,7 @@ nav {
   50% { opacity: 1; transform: scaleY(1); }
 }
 
-/* ── Sections shared ───────────────────────────────── */
+/* Sections shared */
 .section { padding-block: var(--section-pad); }
 .section--alt { background: var(--smoke); }
 .section--dark { background: var(--ink); color: rgba(255,255,255,0.88); }
@@ -196,7 +193,7 @@ p + p { margin-top: 1rem; }
 strong { font-weight: 700; color: var(--amber-deep); }
 .section--dark strong { color: var(--amber-pale); }
 
-/* ── Figure / image ────────────────────────────────── */
+/* Figure / image */
 figure {
   margin-block: 2.4rem;
   border-radius: 3px;
@@ -217,7 +214,7 @@ figcaption {
 }
 .section--dark figcaption { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); border-top-color: rgba(255,255,255,0.1); }
 
-/* ── Two-column layout ─────────────────────────────── */
+/* Two-column layout */
 .two-col {
   display: grid;
   gap: clamp(2rem, 5vw, 4rem);
@@ -228,14 +225,14 @@ figcaption {
   .two-col.flip > *:first-child { order: 2; }
 }
 
-/* ── Stat / callout ────────────────────────────────── */
+/* Stat / callout */
 .callout p { font-style: italic; font-size: 1.05em; }
 .callout cite { display: block; margin-top: 0.4rem; font-size: 0.82rem; color: var(--mid); font-style: normal; }
 .section--dark .callout { background: rgba(255,255,255,0.05); border-left-color: var(--amber-pale); }
 .section--dark .callout p { color: rgba(255,255,255,0.9); }
 .section--dark .callout cite { color: rgba(255,255,255,0.4); }
 
-/* ── Causes grid ───────────────────────────────────── */
+/* Causes grid */
 .causes-grid {
   display: grid;
   gap: 1.5rem;
@@ -256,7 +253,7 @@ figcaption {
 }
 .cause-card p { font-size: 0.93rem; }
 
-/* ── Timeline strip ────────────────────────────────── */
+/* Timeline strip  */
 .timeline {
   position: relative;
   padding-left: 2rem;
@@ -293,13 +290,13 @@ figcaption {
 }
 .tl-item p { font-size: 0.94rem; color: rgba(255,255,255,0.75); }
 
-/* ── Decision diagram ──────────────────────────────── */
+/* Decision diagram  */
 .decision-diagram {
   display: none;
 }
 .decision-diagram svg { max-width: 100%; height: auto; }
 
-/* ── What to do -- toggle ──────────────────────────── */
+/*  What to do toggle  */
 #what-to-do { padding-block: var(--section-pad); }
 .toggle-row {
   display: flex;
@@ -356,7 +353,7 @@ figcaption {
 .step-text strong { display: block; margin-bottom: 0.2rem; font-size: 0.97rem; }
 .step-text p { font-size: 0.9rem; color: var(--mid); margin: 0; }
 
-/* ── Sources ───────────────────────────────────────── */
+/* Sources  */
 #sources { padding-block: var(--section-pad); background: var(--smoke); }
 .sources-list {
   list-style: none;
@@ -375,7 +372,7 @@ figcaption {
 .sources-list li:last-child { border-bottom: none; }
 .sources-list a { word-break: break-all; }
 
-/* ── Footer ────────────────────────────────────────── */
+/*  Footer  */
 footer {
   background: var(--ink);
   color: rgba(255,255,255,0.4);
@@ -386,7 +383,7 @@ footer {
 }
 footer a { color: rgba(255,255,255,0.55); }
 
-/* ── Reveal on scroll ──────────────────────────────── */
+/*  Reveal on scroll  */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -396,9 +393,6 @@ footer a { color: rgba(255,255,255,0.55); }
   opacity: 1;
   transform: none;
 }
-
-/* ─── UNCOMMON STYLING ──────────────────────────────── */
-
 /* Animated gradient underlines for headings */
 .section-head h2 {
   position: relative;
@@ -454,11 +448,12 @@ footer a { color: rgba(255,255,255,0.55); }
   z-index: 1;
   transition: color 0.3s ease;
 }
+/*
 .cause-card:hover h3 {
   color: var(--amber);
   text-shadow: 0 0 10px rgba(200, 130, 10, 0.2);
 }
-
+*/
 /* Floating animation for images */
 figure img {
   animation: floatingImage 6s ease-in-out infinite;
@@ -585,22 +580,24 @@ a:hover::after {
   box-shadow: 0 0 0 3px rgba(200, 130, 10, 0.1);
   transition: all 0.3s ease;
 }
+/*
 .tl-item:hover .tl-dot {
   box-shadow: 0 0 12px 4px rgba(200, 130, 10, 0.25);
   transform: scale(1.3);
 }
-
+*/
 /* Step numbers with gradient */
 .step-num {
   background: linear-gradient(135deg, var(--amber), var(--amber-deep));
   box-shadow: 0 4px 10px rgba(200, 130, 10, 0.2);
   transition: all 0.3s ease;
 }
+/*
 .step-list li:hover .step-num {
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(200, 130, 10, 0.35);
 }
-
+*/
 /* Subtle card background animation */
 @keyframes shimmer {
   0% { background-position: -1000px 0; }
@@ -611,9 +608,7 @@ a:hover::after {
   animation: shimmer 8s infinite;
 }
 
-/* ─── END UNCOMMON STYLING ────────────────────────── */
-
-/* ── Mobile tweaks ─────────────────────────────────── */
+/* ── Mobile tweaks  */
 @media (max-width: 480px) {
   .nav-links { display: none; }
   .toggle-row { max-width: 100%; }
