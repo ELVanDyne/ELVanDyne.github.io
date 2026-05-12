@@ -397,6 +397,222 @@ footer a { color: rgba(255,255,255,0.55); }
   transform: none;
 }
 
+/* ─── UNCOMMON STYLING ──────────────────────────────── */
+
+/* Animated gradient underlines for headings */
+.section-head h2 {
+  position: relative;
+  display: inline-block;
+}
+.section-head h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--amber-deep), var(--amber), var(--amber-pale));
+  transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.section.reveal.in-view .section-head h2::after {
+  width: 100%;
+}
+
+/* Hexagonal cause cards with hover lift */
+.cause-card {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+  background: var(--cream);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 15px rgba(200, 130, 10, 0.08);
+}
+/*
+.cause-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(200, 130, 10, 0.18);
+  background: linear-gradient(135deg, var(--cream) 0%, rgba(245, 228, 184, 0.5) 100%);
+  
+}
+
+.cause-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+.cause-card:hover::before {
+  left: 100%;
+}
+*/
+.cause-card h3 {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+.cause-card:hover h3 {
+  color: var(--amber);
+  text-shadow: 0 0 10px rgba(200, 130, 10, 0.2);
+}
+
+/* Floating animation for images */
+figure img {
+  animation: floatingImage 6s ease-in-out infinite;
+}
+@keyframes floatingImage {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Gradient text on hero title */
+.hero-title {
+  background: linear-gradient(135deg, #fff 0%, rgba(245, 228, 184, 0.8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleGlow 3s ease-in-out infinite;
+}
+@keyframes titleGlow {
+  0%, 100% { filter: drop-shadow(0 0 0px rgba(200, 130, 10, 0)); }
+  50% { filter: drop-shadow(0 0 10px rgba(200, 130, 10, 0.3)); }
+}
+
+/* Enhanced links with animated underline */
+a {
+  position: relative;
+  text-decoration: none;
+}
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--amber-deep), var(--amber));
+  transition: width 0.3s ease;
+}
+a:hover::after {
+  width: 100%;
+}
+
+/* Special styling for nav links - override underline */
+.nav-links a {
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+.nav-links a::after {
+  display: none;
+}
+.nav-links a:hover {
+  border-bottom-color: var(--amber);
+}
+
+/* CTA button enhancement */
+.hero-cta {
+  position: relative;
+  border: 2px solid rgba(255,255,255,0.4);
+  overflow: hidden;
+}
+.hero-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+.hero-cta:hover::before {
+  left: 100%;
+}
+.hero-cta:hover {
+  background: rgba(200, 130, 10, 0.15);
+  border-color: var(--amber-pale);
+  box-shadow: 0 0 20px rgba(200, 130, 10, 0.3);
+}
+
+/* Decorative honeycomb pattern background (subtle) */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 10px,
+    rgba(200, 130, 10, 0.05) 10px,
+    rgba(200, 130, 10, 0.05) 20px
+  );
+  pointer-events: none;
+}
+
+/* Callout styling with gradient border */
+.callout {
+  position: relative;
+  border-left: 4px solid var(--amber);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background: rgba(245, 228, 184, 0.25);
+  border-radius: 0 4px 4px 0;
+  transition: all 0.3s ease;
+}
+.callout::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--amber-deep), var(--amber), var(--amber-pale));
+}
+.callout:hover {
+  background: rgba(245, 228, 184, 0.4);
+  transform: translateX(4px);
+}
+
+/* Timeline dots with glow */
+.tl-dot {
+  box-shadow: 0 0 0 3px rgba(200, 130, 10, 0.1);
+  transition: all 0.3s ease;
+}
+.tl-item:hover .tl-dot {
+  box-shadow: 0 0 12px 4px rgba(200, 130, 10, 0.25);
+  transform: scale(1.3);
+}
+
+/* Step numbers with gradient */
+.step-num {
+  background: linear-gradient(135deg, var(--amber), var(--amber-deep));
+  box-shadow: 0 4px 10px rgba(200, 130, 10, 0.2);
+  transition: all 0.3s ease;
+}
+.step-list li:hover .step-num {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(200, 130, 10, 0.35);
+}
+
+/* Subtle card background animation */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+.cause-card {
+  background-size: 200% 100%;
+  animation: shimmer 8s infinite;
+}
+
+/* ─── END UNCOMMON STYLING ────────────────────────── */
+
 /* ── Mobile tweaks ─────────────────────────────────── */
 @media (max-width: 480px) {
   .nav-links { display: none; }
